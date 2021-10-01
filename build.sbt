@@ -1,11 +1,11 @@
 name := "learning-cats-typeclasses"
 
-version := "0.1"
+ThisBuild / scalaVersion := "2.13.6"
 
-scalaVersion := "2.13.6"
+ThisBuild / githubWorkflowPublishTargetBranches := Seq()
 
 libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % "2.3.0",
   "org.scalactic" %% "scalactic" % "3.2.10",
-  "org.scalatest" %% "scalatest" % "3.2.10" % "test"
+  "org.scalatest" %% "scalatest" % "3.2.10" % "test",
 )

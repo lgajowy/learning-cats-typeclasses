@@ -4,6 +4,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 
 import java.util
+import java.util.EmptyStackException
 
 class ExampleSpec extends AnyFlatSpec with should.Matchers {
 
@@ -17,7 +18,7 @@ class ExampleSpec extends AnyFlatSpec with should.Matchers {
 
   it should "throw NoSuchElementException if an empty stack is popped" in {
     val emptyStack = new util.Stack[Int]
-    a[NoSuchElementException] should be thrownBy {
+    a[EmptyStackException] should be thrownBy {
       emptyStack.pop()
     }
   }
